@@ -1,2 +1,1 @@
-# REGEDIT
-beautiful
+Code Aimbot In Game Patch Int32 proc = Process.GetProcessesByName("HD-Player")[0].Id; memory.OpenProcess(proc); var result = await memory.AoBScan("FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 A5 43 00 00 00 00", true, true); if (result.Any()) { foreach (var CurrentAddress in result) { Int64 EndercoLeitura = CurrentAddress + 0x60; Int64 EndercoEscrita = CurrentAddress + 0x5C; var Read = memory.ReadMemory(EndercoLeitura.ToString("X")); memory.WriteMemory(EndercoEscrita.ToString("X"), "int", Read.ToString()); } } else { }
